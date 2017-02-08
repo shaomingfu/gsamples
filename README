@@ -1,3 +1,23 @@
+#========
+Abstract
+#========
+
+Given BAM file, generate ReadCount file for DeepBound
+
+
+
+#===========
+Fast install
+#===========
+
+./install_gsamples.sh
+
+
+
+#=============
+Detail install
+#=============
+
 To install gsample, you need to first download/compile two software packages, 
 Samtools and Boost, setup the corresponding environmental variables, and then
 compile the source code of gsample.
@@ -27,7 +47,14 @@ platforms, add the following statement to the file ~/.bash_profile:
 
 The executable file gsamples will be present at src/.
 
-4, COMMAND LINE
+
+
+#================
+Usage and example
+#================
+
+Usage:
+
 The usage of gsamples is: ./gsamples <in-bam-file> <out-sample-file> [-f fasta-dir] [-g gtf-file] [-e min-expression]
  The parameter <in-bam-file> specifies the input reads alignemnt file. It has to be sorted (for example, by samtools).
  The parameter <out-sample-file> specifies the the output sample file.
@@ -39,6 +66,8 @@ The usage of gsamples is: ./gsamples <in-bam-file> <out-sample-file> [-f fasta-d
  The parameter [min-expression] is together with [-g gtf-file], which will make gsamples ignore these transcripts in the gtf-file with
  expression abundance under this value.
 
-5, One-line Example
+--------------------------
+
+One-line Example:
 src/gsamples example/test.bam test.ReadCount
 
