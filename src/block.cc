@@ -77,6 +77,13 @@ int block::build_abundance(const join_interval_map &jmap)
 int block::build_labels()
 {
 	if(s.size() < min_sample_length) return 0;
+	
+	if(input_gtf_file == "")
+	{
+		labels.assign(s.size(), -1);
+		return 0;
+	}
+
 	labels.assign(s.size(), 1);
 	for(int i = 0; i < ss.size(); i++)
 	{
